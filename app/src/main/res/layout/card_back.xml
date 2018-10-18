@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tint="@color/cardBack"
+        android:padding="16dp"
+        android:src="@drawable/rectangle"/>
+
+    <TextView
+        android:id="@+id/backText"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/back"
+        android:textColor="@color/white" />
+
+</FrameLayout>

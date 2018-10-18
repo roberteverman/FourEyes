@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#d81b60</color>
+    <color name="cardFront">#2969b0</color>
+    <color name="cardBack">#553982</color>
+    <color name="white">#ffff</color>
+    <color name="cardTop">#00a885</color>
+    <color name="cardBottom">#b8312f</color>
+    <color name="blueWhale">#28324e</color>
+    <color name="wellRead">#b8312f</color>
+    <color name="colorChambray">#475577</color>
+    <color name="colorIron">#d1d5d8</color>
+    <color name="colorFern">#61bd6d</color>
+    <color name="chateauGreen">#41a85f</color>
+</resources>

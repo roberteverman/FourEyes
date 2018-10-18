@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FourEyes</string>
+    <string name="front">FRONT</string>
+    <string name="back">BACK</string>
+    <string name="top">TOP</string>
+    <string name="bottom">BOTTOM</string>
+    <string name="title_activity_select_cards">selectCards</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
