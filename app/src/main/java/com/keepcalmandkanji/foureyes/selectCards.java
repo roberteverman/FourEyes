@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -39,6 +40,11 @@ public class selectCards extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int[] newPositionNumbers = adapter.clickStart();
+
+                //debugging
+                for (int i = 0; i < newPositionNumbers.length; i ++){
+                    //Log.i("BLAH","NEW POSITIONS: " + Integer.toString(newPositionNumbers[i]));
+                }
 
                 if(newPositionNumbers.length == 0) {
                     Toast.makeText(selectCards.this, "SELECT AT LEAST ONE", Toast.LENGTH_SHORT).show();

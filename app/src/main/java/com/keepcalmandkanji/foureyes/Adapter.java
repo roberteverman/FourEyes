@@ -43,9 +43,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         for (int i = 0; i < ITEM_COUNT; ++i) {
             itemStateArray.put(i,true);
             items.add(new Item(Integer.toString(positionNumbers[i]),
-                    "Front: " + databaseAccess.getItemAtPosition(selectedTable,selectedFront,i)
-                    + "\nBack: " + databaseAccess.getItemAtPosition(selectedTable,selectedBack,i)
-                    + "\nTop: " + databaseAccess.getItemAtPosition(selectedTable,selectedTop,i)
+                    "Front: " + databaseAccess.getItemAtPosition(selectedTable,selectedFront,positionNumbers[i])
+                    + "\nBack: " + databaseAccess.getItemAtPosition(selectedTable,selectedBack,positionNumbers[i])
+                    + "\nTop: " + databaseAccess.getItemAtPosition(selectedTable,selectedTop,positionNumbers[i])
                     + "\nBottom: " + databaseAccess.getItemAtPosition(selectedTable,selectedBottom,i),getChecked(i)
             ));
         }
@@ -74,10 +74,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public int[] clickStart() {
         List newPositions = new ArrayList();
-        Log.i("TEST","Start Clicked!!");
+        //Log.i("TEST","Start Clicked!!");
         for (int i = 0; i < ITEM_COUNT; ++i) {
+            //Log.i("BLAH",Integer.toString(i));
             if(itemStateArray.get(i)) {
                 newPositions.add(selectedPositions[i]);
+                //Log.i("BLAH","ADDED "+ Integer.toString(selectedPositions[i]));
             }
         }
 
@@ -89,14 +91,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             int[] newPositionNumbers = new int[newPositions.size()];
             for (int i = 0; i < newPositions.size(); ++i) {
                 newPositionNumbers[i] = Integer.parseInt(newPositions.get(i).toString());
-
             }
             return newPositionNumbers;
         }
     }
 
     public void clickAll() {
-        Log.i("TEST","All Clicked!");
+        //Log.i("TEST","All Clicked!");
         for (int i = 0; i < ITEM_COUNT; ++i) {
             if(!itemStateArray.get(i)) {
                 itemStateArray.put(i,true);
@@ -106,7 +107,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public void clickNone() {
-        Log.i("TEST","None Clicked!");
+        //Log.i("TEST","None Clicked!");
         for (int i = 0; i < ITEM_COUNT; ++i) {
             if(itemStateArray.get(i)) {
                 itemStateArray.put(i,false);

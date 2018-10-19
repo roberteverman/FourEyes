@@ -75,15 +75,15 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedTable = spFlashcards.getSelectedItem().toString();
 
-                Log.i("CHECK", spFlashcards.getSelectedItem().toString());
+                //Log.i("CHECK", spFlashcards.getSelectedItem().toString());
 
                 String[] columns = databaseAccess.getColumns(selectedTable);
 
                 for (int i = 0; i < columns.length; i++) {
-                    Log.i("CHECK",columns[i]);
+                    //Log.i("CHECK",columns[i]);
                 }
 
-                Log.i("CHECK","WORKED!");
+                //Log.i("CHECK","WORKED!");
 
                 arrayAdapter = new ArrayAdapter<String>(MainActivity.this,R.layout.spinner,columns);
                 spFront.setAdapter(arrayAdapter);
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Boolean random = ckRandomize.isChecked();
                 positionNumbers = databaseAccess.getPositionNumbers(selectedTable,random);
-                Log.i("BLAH",Integer.toString(positionNumbers[0]));
+                //Log.i("BLAH",Integer.toString(positionNumbers[0]));
 
             }
 
@@ -111,8 +111,8 @@ public class MainActivity extends AppCompatActivity {
                 String selectedFront = spFront.getSelectedItem().toString();
                 Boolean random = ckRandomize.isChecked();
                 positionNumbers = databaseAccess.getPositionNumbers(selectedTable,random);
-                Log.i("BLAH",Integer.toString(positionNumbers[0]));
-                Log.i("BLAH3",databaseAccess.getItemAtPosition(selectedTable,selectedFront,positionNumbers[0]));
+                //Log.i("BLAH",Integer.toString(positionNumbers[0]));
+                //Log.i("BLAH3",databaseAccess.getItemAtPosition(selectedTable,selectedFront,positionNumbers[0]));
             }
         });
 

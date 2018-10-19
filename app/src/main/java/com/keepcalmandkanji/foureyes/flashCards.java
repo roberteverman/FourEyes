@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -66,6 +67,11 @@ public class flashCards extends AppCompatActivity {
     String selectedBottom = getIntent().getStringExtra("selectedBottom");
 
     positionNumbers = getIntent().getIntArrayExtra("positionNumbers");
+    for (int i = 0; i < positionNumbers.length; i ++){
+      //Log.i("BLAH","Received Positions: " + Integer.toString(positionNumbers[i]));
+    }
+
+
     counter = 0;
     flashcardSize = positionNumbers.length;
 
