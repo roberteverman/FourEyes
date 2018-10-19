@@ -154,9 +154,9 @@ public class fileExplorer extends AppCompatActivity {
 
             for (int i = 0; i < firstRow.length; i++) {
                 if (i == 0) {
-                    newColumns = firstRow[i].replace(" ", "") + " VARCHAR";
+                    newColumns = "[" + firstRow[i] + "]" + " VARCHAR";
                 } else {
-                    newColumns = newColumns + "," + firstRow[i].replace(" ", "") + " VARCHAR";
+                    newColumns = newColumns + "," + "[" + firstRow[i] + "]" + " VARCHAR";
                 }
             }
             Log.i("BLAH", newColumns);

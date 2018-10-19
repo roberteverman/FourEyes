@@ -85,9 +85,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             int[] newPositionNumbers = new int[0];
             return newPositionNumbers;
         } else {
+
             int[] newPositionNumbers = new int[newPositions.size()];
             for (int i = 0; i < newPositions.size(); ++i) {
                 newPositionNumbers[i] = Integer.parseInt(newPositions.get(i).toString());
+
             }
             return newPositionNumbers;
         }
