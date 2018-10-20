@@ -46,7 +46,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                     "Front: " + databaseAccess.getItemAtPosition(selectedTable,selectedFront,positionNumbers[i])
                     + "\nBack: " + databaseAccess.getItemAtPosition(selectedTable,selectedBack,positionNumbers[i])
                     + "\nTop: " + databaseAccess.getItemAtPosition(selectedTable,selectedTop,positionNumbers[i])
-                    + "\nBottom: " + databaseAccess.getItemAtPosition(selectedTable,selectedBottom,i),getChecked(i)
+                    + "\nBottom: " + databaseAccess.getItemAtPosition(selectedTable,selectedBottom,positionNumbers[i]),getChecked(i)
             ));
         }
     }
