@@ -7,73 +7,103 @@
     android:layout_height="match_parent"
     tools:context=".flashCards">
 
-    <FrameLayout
-        android:id="@+id/mainFrame"
+    <android.widget.RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp"
+        android:padding="30dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:elevation="6dp"
+            app:backgroundTint="@color/chateauGreen"
+            app:srcCompat="?android:attr/textCheckMark" />
+
+    </android.widget.RelativeLayout>
+
         <FrameLayout
-            android:id="@+id/card_front_left"
+            android:id="@+id/mainFrame"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <include layout="@layout/card_left" />
+
+
+
+
+
+            <FrameLayout
+                android:id="@+id/card_front_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/card_left" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card_front_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/card_right" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card_front"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <include layout="@layout/card_front" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.0">
+
+
+                <include layout="@layout/card_top" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.0">
+
+                <include layout="@layout/card_back" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.0">
+
+                <include layout="@layout/card_bottom" />
+
+
+            </FrameLayout>
 
         </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/card_front_right"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <include layout="@layout/card_right" />
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/card_front"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-            <include layout="@layout/card_front" />
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/card_top"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.0">
-
-
-            <include layout="@layout/card_top" />
-
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/card_back"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.0">
-
-            <include layout="@layout/card_back" />
-
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/card_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.0">
-
-            <include layout="@layout/card_bottom" />
-
-
-        </FrameLayout>
-
-    </FrameLayout>
+    </android.widget.RelativeLayout>
 
 </FrameLayout>
