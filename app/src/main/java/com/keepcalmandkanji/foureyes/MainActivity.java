@@ -91,6 +91,30 @@ public class MainActivity extends AppCompatActivity {
                 spTop.setAdapter(arrayAdapter);
                 spBottom.setAdapter(arrayAdapter);
 
+                int numColumns = spFront.getAdapter().getCount();
+                Log.i("BLAH","COUNT IS " + Integer.toString(numColumns));
+
+                if (numColumns >= 4) {
+                    spFront.setSelection(0);
+                    spBack.setSelection(1);
+                    spTop.setSelection(2);
+                    spBottom.setSelection(3);
+                } else if (numColumns == 3){
+                    spFront.setSelection(0);
+                    spBack.setSelection(1);
+                    spTop.setSelection(2);
+                    spBottom.setSelection(0);
+                } else if (numColumns == 2) {
+                    spFront.setSelection(0);
+                    spBack.setSelection(1);
+                    spTop.setSelection(0);
+                    spBottom.setSelection(1);
+                } else  {
+                    spFront.setSelection(0);
+                    spBack.setSelection(0);
+                    spTop.setSelection(0);
+                    spBottom.setSelection(0);
+                }
 
                 Boolean random = ckRandomize.isChecked();
                 positionNumbers = databaseAccess.getPositionNumbers(selectedTable,random);

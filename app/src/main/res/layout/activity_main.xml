@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:checked="true"
+        android:checked="false"
         android:text="Randomize"
         android:textColor="@color/colorIron"
         android:textColorLink="@color/colorChambray" />

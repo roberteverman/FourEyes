@@ -295,10 +295,12 @@ public class flashCards extends AppCompatActivity {
 
   }
 
+  /*
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, MainActivity.class));
     }
+  */
 
   private void changeCameraDistance() {
     int distance = 8000;
