@@ -10,8 +10,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,9 +45,6 @@ public class flashCards extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    requestWindowFeature(Window.FEATURE_NO_TITLE);
-    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
     setContentView(R.layout.activity_flash_cards);
 
     //set up database
@@ -63,13 +58,6 @@ public class flashCards extends AppCompatActivity {
     TextView bottomText = (TextView) findViewById(R.id.bottomText);
     TextView leftText = (TextView) findViewById(R.id.leftText);
     TextView rightText = (TextView) findViewById(R.id.rightText);
-
-    //get level text
-    TextView lvl1 = (TextView) findViewById(R.id.lvl1);
-    TextView lvl2 = (TextView) findViewById(R.id.lvl2);
-    TextView lvl3 = (TextView) findViewById(R.id.lvl3);
-    TextView lvl4 = (TextView) findViewById(R.id.lvl4);
-    TextView lvl5 = (TextView) findViewById(R.id.lvl5);
 
     //get data from main activity
     String selectedTable = getIntent().getStringExtra("selectedTable");
@@ -86,8 +74,6 @@ public class flashCards extends AppCompatActivity {
 
     counter = 0;
     flashcardSize = positionNumbers.length;
-
-    lvl1.setText(Integer.toString(flashcardSize));
 
     //set initial card text
     frontText.setText(databaseAccess.getItemAtPosition(selectedTable,selectedFront,getCurrentPosition()));
