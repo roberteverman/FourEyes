@@ -150,7 +150,7 @@
             android:elevation="1dp"
             android:padding="30dp">
 
-            <com.example.MovableFloatingActionButton
+            <com.keepcalmandkanji.foureyes.MovableFloatingActionButton
                 android:id="@+id/correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
                 app:backgroundTint="@android:color/holo_green_dark"
                 app:srcCompat="@drawable/correct" />
 
-            <com.example.MovableFloatingActionButton
+            <com.keepcalmandkanji.foureyes.MovableFloatingActionButton
                 android:id="@+id/incorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

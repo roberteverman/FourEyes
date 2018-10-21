@@ -1,4 +1,4 @@
-package com.example;
+package com.keepcalmandkanji.foureyes;
 
 import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
